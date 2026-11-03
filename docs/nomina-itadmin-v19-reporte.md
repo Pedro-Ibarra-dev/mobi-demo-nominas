@@ -77,6 +77,14 @@ Idioma: español (México) para el usuario admin; zona horaria America/Mazatlan.
 
 **Empleados (apps nativas):** habilidades (ebanistería, software, seguridad, inglés), currículum, 4 evaluaciones (1 hecha, 2 en curso, 1 nueva), 4 gastos aprobados con analítica, reclutamiento de Almacenista con 5 candidatos, vacaciones LFT asignadas, solicitud de Jorge por aprobar, festivos 16-nov y 25-dic, una semana de asistencias.
 
+**Onboarding, cursos y logros (apps eLearning y Gamificación, instaladas el 3-nov):**
+- Usuarios internos **sin contraseña** para Karla, Héctor, Ramón, Mariana y Luis (nadie puede entrar con ellos; sirven para asignar actividades, cursos e insignias).
+- Plan **Onboarding Mobi (ingreso)**, 8 tareas, aplicado a Ramón el 3-nov: 6 hechas (contrato, usuario, IMSS, CLABE, EPP, inducción) y 2 pendientes (curso de seguridad, evaluación de fin de periodo de prueba).
+- Plan **Offboarding Mobi (baja)**, 6 tareas, aplicado a José Manuel el 15-dic: finiquito hecho y 5 pendientes.
+- 3 cursos internos: *Inducción Mobi Muebles*, *Seguridad e higiene en almacén* y *Odoo Inventario para almacenistas*. Ramón va al 100%, 50% y 33%; Luis, Mariana y Héctor terminaron los suyos. Los cursos terminados se agregaron solos al currículum.
+- Insignias: *Bienvenido a Mobi* y *Bien hecho* (Ramón), *Seguridad primero* (Luis y Héctor), *Solucionador de problemas* (Luis) y *Mejor vendedora del mes* (Mariana).
+- El menú de entradas de trabajo de Odoo se renombró de "Nómina" a "Entradas de trabajo" para no duplicar el de IT Admin.
+
 **Contabilidad:** 6 clientes y 7 proveedores, 14 facturas de venta (sep-nov) con analítica región/ciudad, 14 facturas de compra (oct-nov), 17 pagos, 12 pólizas de nómina publicadas + dispersión bancaria de cada una, entero de retenciones de octubre, 5 movimientos bancarios sin conciliar (para conciliar en vivo), 2 presupuestos 2026 por región (nómina y ventas), router CNC como activo (depreciación 10 años).
 
 ---
@@ -121,6 +129,8 @@ Cada lote cerrado tiene su póliza publicada (NOM) y su dispersión bancaria. Lo
 ## 8. Guion de la demo (~40 min) — "Un mes en Mobi Muebles con IT Admin"
 
 1. **Reclutamiento → empleado.** Puesto *Almacenista*: embudo con 5 candidatos; Ramón en *Contrato firmado* → su ficha. *"Del candidato al empleado sin recapturar."*
+   - **Onboarding:** en la ficha de Ramón, actividades del plan *Onboarding Mobi* (quién hace qué y cuándo; 6 hechas, 2 pendientes). **En vivo:** lanzar el plan sobre otro empleado con *Lanzar plan*.
+   - **Cursos y logros:** pestaña *Currículum* con la inducción terminada desde eLearning; pestaña de insignias (*Bienvenido a Mobi*, *Bien hecho*). En **eLearning**, el avance de cada curso (Ramón 100% / 50% / 33%). *"Del candidato al empleado capacitado, en un solo expediente."*
 2. **Expediente (Empleados).** Luis Armenta: datos fiscales (RFC, CURP, NSS, CP SAT, CLABE), régimen y contrato SAT, registro patronal, Infonavit cuota fija, Fonacot, pensión 20%, habilidades y currículum. Historial de versiones (aumento 5% del 1-dic). Organigrama.
 3. **Incidencias IT Admin (Nómina → Incidencias).** Cambio de salario de Luis (SDI recalculado) y baja de José Manuel: *"esto es lo que alimenta el IDSE"*.
 4. **Ausencias.** Calendario de noviembre: falta de Andrés, incapacidades de Héctor (RT) y José Manuel (EG), vacaciones de Karla; festivo 16-nov. **En vivo:** aprobar las vacaciones de Jorge (21-24 dic).
