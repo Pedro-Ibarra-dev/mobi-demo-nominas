@@ -83,7 +83,11 @@ Idioma: español (México) para el usuario admin; zona horaria America/Mazatlan.
 
 ## 6. Pendientes
 
-1. **Timbrado:** cargar el CSD de pruebas del SAT (EKU9003173C9, en `~/Downloads/01_Fiscal_SAT/`) en Contabilidad → Configuración → Certificados — Pedro lo hace a mano (la contraseña no la teclea Claude). Después: timbrar un lote desde el procesamiento.
+1. **Timbrado (se deja así, 3-nov):** CSD de pruebas EKU9003173C9 cargado (.cer + .key) y Finkok en ambiente de pruebas. El XML ya pasa sello, estructura, emisor y RFC/nombre del receptor; el SAT de pruebas rechaza el CP del receptor (CFDI40147) con los 13 RFC de personas físicas de la lista pública de Facturama, así que no hay recibos timbrados. Para cerrarlo se necesita la lista de RFC de pruebas vigente de soporte de Finkok.
+   - El XML confirma `alku_nomina_itadmin_fix`: `TotalOtrosPagos="0.00"` y `Antigüedad` desde la fecha de ingreso.
+   - Para timbrar en pruebas, la compañía debe llamarse "ESCUELA KEMPER URGATE" (IT Admin manda `company.name` en mayúsculas como nombre del emisor).
+   - Se asignó clave SAT a 9 reglas que bloqueaban el timbrado: 390 Préstamo, 391 Interés del préstamo, D089, D011, D014 y D040 → 004 Otros; D019 → 011 FONACOT; D092 → 010 Vivienda; P013 Gratificación → 038 Otros ingresos por salarios.
+   - Quedaron en la base, para reintentar: el empleado 999 "INGRID XODAR JIMENEZ" (RFC de pruebas) y el lote borrador "Prueba de timbrado SAT". No forman parte del guion.
 2. Póliza IMSS patronal (asistente de IT Admin) y reporte de ISN: probar en vivo.
 3. Acción de servidor para el reparto de PTU (reemplazar el botón roto).
 4. Revisión del developer Sr. de: reglas parchadas, estructura FINIQ y `alku_nomina_itadmin_fix`.
@@ -131,6 +135,6 @@ Cada lote cerrado tiene su póliza publicada (NOM) y su dispersión bancaria. Lo
 13. **Contabilidad general (músculo).** Facturas de venta con CFDI y analítica, cuentas por cobrar (4 pendientes), **conciliación bancaria en vivo** (3 SPEI de clientes, comisión, CFE), gastos de empleados → registrar y reembolsar, activo CNC con su tabla de depreciación, reportes de estado de resultados por analítica.
 
 ### Qué no prometer todavía
-- **Timbrado** hasta cargar el CSD de pruebas (pendiente 1).
+- **Timbrado:** se muestra hasta "listo para timbrar"; el timbrado real se valida con el CSD y empleados del primer cliente (pendiente 1).
 - **PTU automática:** hoy el reparto se captura; la automatización es desarrollo/acción de servidor.
 - **SUA/IDSE y dispersión con layout bancario:** IT Admin trae las incidencias; los archivos dependen del banco/configuración.
