@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+        <!-- INHERIT view_company_form  --> 
+        <record id="Partner_form" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//notebook" position="inside">
+                    <field name="company_cfdi" invisible="1"/>
+                    <page name="info_cdfi_ee" string="Nomina CFDI" invisible="company_cfdi != True">
+                        <group cols="4"  string="Configuración">
+                            <group>
+                                <field name="curp"/>
+                                <field name="serie_nomina"/>
+                                <field name="nomina_mail" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_company_form_ext" model="ir.ui.view">
+            <field name="name">res company </field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="company_cfdi"/>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>
