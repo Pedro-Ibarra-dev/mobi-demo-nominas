@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- IT Admin solo muestra "Crear Polizas" cuando todos los recibos ya estan confirmados.
+         action_crear_poliza confirma por si mismo los recibos en borrador, asi que se
+         muestra en cuanto el lote tiene recibos y todavia no tiene poliza. -->
+    <record id="hr_payslip_run_form_crear_poliza_visible" model="ir.ui.view">
+        <field name="name">hr.payslip.run.form.alku.crear.poliza</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="om_hr_payroll_account_ee.hr_payslip_run_form_nomina_cfdi_conta"/>
+        <field name="arch" type="xml">
+            <button name="action_crear_poliza" position="attributes">
+                <attribute name="invisible">not slip_ids or move_id</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
